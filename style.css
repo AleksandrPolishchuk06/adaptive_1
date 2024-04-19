@@ -384,7 +384,7 @@ body {
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .btn_baner {
   padding: 10px 5px;
@@ -510,6 +510,14 @@ button {
   }
   .popular_list {
     margin-bottom: 20px;
+  }
+  .burgerNAV ul {
+    position: fixed;
+    top: 0;
+    width: 35vw;
+    z-index: 5;
+    background-color: rgb(148, 181, 213);
+    opacity: 0.8;
   }
 }
 @media (max-width: 768px) {
