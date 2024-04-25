@@ -18,10 +18,11 @@ body {
 :root {
   --main_text: black;
   --akcent_color: #12378e;
-  --base_color: silver;
-  --light_gray_text: silver;
+  --base_color: #f0f0f4;
+  --light_gray_text: #e4e4e7;
   --white_color: white;
 }
+
 .burger_menu {
   padding: 18px;
 }
@@ -37,6 +38,9 @@ body {
   justify-content: space-between;
   z-index: 2;
 }
+.header_destop {
+  display: none;
+}
 .logo_text {
   font-size: 7vw;
   font-weight: 600;
@@ -46,6 +50,7 @@ body {
   top: 0;
   left: -80%;
   width: 80%;
+  height: 100%;
   z-index: 5;
   background-color: rgb(148, 181, 213);
   opacity: 0.8;
@@ -61,9 +66,8 @@ body {
   cursor: pointer;
 }
 
-.burgerNAV li:nth-child(-n + 2):before {
+.burgerNAV li:nth-child(1 + 5):before {
   content: url(img/people_simbol.svg);
-  vertical-align: middle;
   margin-right: 5px;
 }
 .burgerNAV li:nth-child(3):before {
@@ -83,21 +87,35 @@ body {
 }
 
 .baner_box {
-  margin-top: 60px;
+  margin: 0 auto;
   position: relative;
   display: flex;
-  align-items: flex-end;
-  width: 100vw;
-  height: 50vw;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  gap: 5%;
+  height: 36vw;
+}
+.baner_left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 121%;
+  height: 36vw;
   background-image: url(img/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.baner_box_destop {
+  width: 50%;
+  height: 36vw;
 }
 
 .baner_text {
   position: absolute;
   color: var(--white_color);
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 600;
   position: absolute;
   text-align: right;
@@ -128,13 +146,14 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
+.alternative_goods_destop {
+  display: none;
+}
 .popular_goods_card_promotion,
 .alternative_goods_card {
   width: 80%;
   border: 1px solid rgb(227, 225, 225);
   border-radius: 5px;
-  margin: 0 auto;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -219,13 +238,20 @@ body {
 .filter p {
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: 3vw;
+  font-size: 2vw;
   color: var(--main_text);
 }
 .filter p:hover {
-  border-bottom: 1px solid var(--akcent_color);
   cursor: pointer;
-  border-bottom: 2px solid var(--light_gray_text);
+  transition: 0, 7s;
+  color: var(--akcent_color);
+  font-weight: 500;
+}
+.header_list_destop li:hover {
+  cursor: pointer;
+  transition: 0, 7s;
+  color: var(--akcent_color);
+  font-weight: 500;
 }
 
 .search_form {
@@ -269,8 +295,8 @@ body {
 }
 
 .good_category_name {
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
 }
 .details {
   font-size: 16px;
@@ -302,6 +328,9 @@ body {
   font-size: 15px;
   text-align: center;
   color: var(--main_text);
+}
+.popular_list_destop {
+  display: none;
 }
 .popular_goods_card {
   width: 80%;
@@ -360,6 +389,9 @@ body {
   background-color: var(--akcent_color);
   margin-top: 30px;
 }
+.promo_baner_destop {
+  display: none;
+}
 
 .link {
   width: 252px;
@@ -371,6 +403,9 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+}
+.link_destop {
+  display: none;
 }
 .promo_baner_text {
   font-weight: 700;
@@ -451,15 +486,32 @@ button {
   display: inline;
   margin: 5px;
 }
+.popolar_item_sale {
+  display: none;
+}
 /* footer */
 /* media */
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
+  .promo_destop {
+    display: none;
+  }
+  .descktop_header {
+    display: none;
+  }
+  .promotion_box_right {
+    display: none;
+  }
+  .baner_left {
+    width: 1000vw;
+  }
+}
+@media (min-width: 720px) and (max-width: 1000px) {
   .category_box {
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
   }
-
   .category {
     width: calc(95% / 2);
   }
@@ -489,10 +541,6 @@ button {
     display: flex;
     width: 40%;
   }
-  .footer {
-    display: flex;
-    width: 100%;
-  }
   .promo_baner {
     display: none;
   }
@@ -519,9 +567,227 @@ button {
     background-color: rgb(148, 181, 213);
     opacity: 0.8;
   }
+  .promotion_box_right {
+    display: none;
+  }
+
+  .descktop_header {
+    display: none;
+  }
+  .promotion_box_right {
+    display: none;
+  }
+  .baner_left {
+    width: 1000vw;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+  }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 1001px) {
+  .popular_pagination,
+  .popular_goods_card {
+    display: none;
+  }
+  .popolar_item_sale {
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+  }
+  .promo_baner {
+    display: none;
+  }
+  .promobaner_box_destop {
+    padding: 15px 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .promo_baner_text_destop {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: left;
+    color: var(--white_color);
+    margin-bottom: 5px;
+  }
+  .btn_baner_destop {
+    padding: 10px 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 20%;
+    height: 20%px;
+    background-color: var(--white_color);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--main_text);
+  }
+  .promo_baner_destop {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--akcent_color);
+    margin-top: 30px;
+  }
+  .link_destop {
+    width: 252px;
+    background-color: var(--base_color);
+    font-size: 15px;
+    text-align: center;
+    color: var(--main_text);
+    padding: 17px 43px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .link {
+    display: none;
+  }
+
+  .popular_list {
+    display: none;
+  }
+
+  .popular_list_destop {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: var(--main_text);
+  }
+  .alternative_goods,
+  .alternative_goods_destop {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+  }
+  .alternative_goods_destop,
+  .alternative_goods {
+    margin-bottom: 40px;
+  }
+  /* .popolar_item_sale {
+    display: none;
+  } */
+  .category_name {
+    margin: auto;
+    width: 90%;
+    justify-content: start;
+    margin-bottom: 5px;
+  }
+  .alternative_goods_card {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+  }
+  .category_box {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .category_box > div {
+    width: 32%;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    background-color: #f0f0f4;
+  }
+  .footer p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  .burger_menu {
+    display: none;
+  }
   .promo_destop {
     display: none;
   }
+  .descktop_header {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .header_list_destop {
+    display: flex;
+    width: 100%;
+    height: 3vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--light_gray_text);
+  }
+
+  .desc_header_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .desc_header_box_nav {
+    display: flex;
+    align-items: center;
+  }
+  .desc_header_box_nav li,
+  .header_adress {
+    margin-right: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .desc_header_box_nav li:hover {
+    color: var(--accent_color);
+    border-bottom: 2px solid var(--accent_color);
+  }
+  .desc_header_box_nav li:last-child {
+    margin-right: 0;
+  }
+  .adress_box {
+    display: flex;
+    align-items: center;
+  }
+  .adress_box img {
+    margin-right: 5px;
+  }
+  .desc_header_icon {
+    display: flex;
+    align-items: center;
+  }
+  .desc_header_icon svg {
+    width: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .desc_header_icon svg:hover {
+    fill: var(--accent_color);
+  }
+  .promotion_box {
+    display: none;
+  }
+
+  .promotion_box_right {
+    width: 100%;
+    height: 100%;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
+/*  */

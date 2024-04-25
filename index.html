@@ -11,9 +11,52 @@
       href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="slyder.css" />
   </head>
   <body>
     <header class="header">
+      <div class="descktop_header">
+        <div class="desc_header_box">
+          <ul class="desc_header_box_nav">
+            <li>Магазини</li>
+            <li>Акції</li>
+            <li>Доставка та оплата</li>
+          </ul>
+          <img width="80" class="logo_img" src="/img/logo.svg" alt="logo" />
+          <div class="adress_box">
+            <img src="/img/point.svg" alt="" />
+            <p class="header_adress">м.Вінниця,вул.Соборна</p>
+          </div>
+          <ul class="desc_header_icon">
+            <li>
+              <svg>
+                <use href="./img/symbol-defs.svg#icon-heart"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./img/symbol-defs.svg#icon-user"></use>
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use href="./img/symbol-defs.svg#icon-cart"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="header_list_destop">
+          <ul class="header_list_destop">
+            <li>Квадроцикли</li>
+            <li>Мотоцикли</li>
+            <li>Лодки</li>
+            <li>Вездиходи</li>
+            <li>Снігоходи</li>
+            <li>Двигуни</li>
+            <li>Запчастини</li>
+          </ul>
+        </div>
+      </div>
       <div class="burger_menu">
         <img class="burger" src="img/menu.svg" alt="menu" />
         <div class="burgerNAV">
@@ -35,6 +78,7 @@
             <li>Запчастини</li>
           </ul>
         </div>
+        <p></p>
         <p class="logo_text">DRIVE MOTO</p>
         <div class="header_icon">
           <img src="img/like_heart.svg" alt="" />
@@ -43,22 +87,70 @@
         </div>
       </div>
     </header>
-
+    <!-- slider start -->
     <section class="baner_box">
-      <p class="baner_text">
-        Відчуй <br />
-        швидкість <br />
-        та екстрим
-      </p>
-      <ul class="pagination">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div class="baner_left">
+        <div class="slider middle">
+          <div class="backdrop"></div>
+          <div class="slides">
+            <input type="radio" name="r" id="r1" checked />
+            <input type="radio" name="r" id="r2" />
+            <input type="radio" name="r" id="r3" />
+            <input type="radio" name="r" id="r4" />
+            <div class="slide s1">
+              <p class="baner_text">
+                Гідроцикл BRP SeaDoo <br />Spark GTS 90hp Rental
+              </p>
+              <img src="./img/baner.jpeg" alt="scooter" class="img" />
+            </div>
+            <div class="slide">
+              <p class="baner_text">
+                Гідроцикл Spark 3-UP 900 HO <br />
+                Ace IBR Blueberry
+              </p>
+              <img src="./img/slider-2.jpeg" alt="scooter" class="img" />
+            </div>
+            <div class="slide">
+              <p class="baner_text">
+                Гідроцикл Spark 2-UP 900 <br />Ho Ace Pineapple
+              </p>
+              <img src="./img/slider-3.jpeg" alt="scooter" class="img" />
+            </div>
+            <div class="slide">
+              <p class="baner_text">
+                Гідроцикл BRP SeaDoo GTR <br />
+                230hp STD Black / Gulfstream
+              </p>
+              <img src="./img/slider-4.jpeg" alt="scooter" class="img" />
+            </div>
+          </div>
+          <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+          </div>
+        </div>
+      </div>
+      <div class="baner_box_destop">
+        <div class="promotion_box_right">
+          <p class="price_promo"><span>SALE</span> $1500</p>
+          <p class="old_price">$2000</p>
+          <img width="123" src="img/engine (2).svg" alt="" />
+          <p class="promo_good_name">
+            Човнийковий мотор <br />
+            Suzuki DF9.9BRS
+          </p>
+          <p class="promo_condition">
+            Акція діє до <br />
+            <span>25.04.2024</span>
+          </p>
+        </div>
+      </div>
     </section>
+    <!--  -->
+    <!-- slider end -->
+    <!--  -->
     <section class="promotion">
       <div class="promotion_box">
         <p class="price_promo"><span>SALE</span> $1500</p>
@@ -99,38 +191,40 @@
           <img class="search_icon" src="img/folow.svg" alt="" />
         </form>
       </article>
-      <article class="category_box">
-        <div class="category">
-          <p class="good_category_name">Квадроцикли</p>
-          <p class="details">Деталініше</p>
-          <img src="img/quadro_up.svg" alt="" />
-        </div>
-        <div class="category">
-          <p class="good_category_name">Гідроцикли</p>
-          <p class="details">Деталініше</p>
-          <img src="img/sea_scooker.svg" alt="" />
-        </div>
-        <div class="category">
-          <p class="good_category_name">Катери</p>
-          <p class="details">Деталініше</p>
-          <img src="img/sea_transport.svg" alt="" />
-        </div>
-        <div class="category">
-          <p class="good_category_name">Снігоходи</p>
-          <p class="details">Деталініше</p>
-          <img src="img/snow_moto.svg" alt="" />
-        </div>
-        <div class="category">
-          <p class="good_category_name">Квадроцикли</p>
-          <p class="details">Деталініше</p>
-          <img src="img/all_road_bagi.svg" alt="" />
-        </div>
-        <div class="category">
-          <p class="good_category_name">Двигуни</p>
-          <p class="details">Деталініше</p>
-          <img width="70" src="img/engine (2).svg" alt="" />
-        </div>
-      </article>
+      <div class="category_container">
+        <article class="category_box">
+          <div class="category">
+            <p class="good_category_name">Квадроцикли</p>
+            <p class="details">Деталініше</p>
+            <img src="img/quadro_up.svg" alt="" />
+          </div>
+          <div class="category">
+            <p class="good_category_name">Гідроцикли</p>
+            <p class="details">Деталініше</p>
+            <img src="img/sea_scooker.svg" alt="" />
+          </div>
+          <div class="category">
+            <p class="good_category_name">Катери</p>
+            <p class="details">Деталініше</p>
+            <img src="img/sea_transport.svg" alt="" />
+          </div>
+          <div class="category">
+            <p class="good_category_name">Снігоходи</p>
+            <p class="details">Деталініше</p>
+            <img src="img/snow_moto.svg" alt="" />
+          </div>
+          <div class="category">
+            <p class="good_category_name">Квадроцикли</p>
+            <p class="details">Деталініше</p>
+            <img src="img/all_road_bagi.svg" alt="" />
+          </div>
+          <div class="category">
+            <p class="good_category_name">Двигуни</p>
+            <p class="details">Деталініше</p>
+            <img width="70" src="img/engine (2).svg" alt="" />
+          </div>
+        </article>
+      </div>
       <article class="promo_destop">
         <p class="promo_baner_text">
           Знижки на всі запчастини <br />
@@ -150,6 +244,14 @@
         <li>Мотори</li>
         <li>Шини</li>
         <li>Електроніка</li>
+      </ul>
+      <ul class="popular_list_destop">
+        <li>Запчастини</li>
+        <li>Мотори</li>
+        <li>Шини</li>
+        <li>Електроніка</li>
+        <li>Інструменти</li>
+        <li>Аксесуари</li>
       </ul>
       <!--  -->
       <!--  -->
@@ -204,6 +306,83 @@
           </p>
         </div>
       </section>
+      <a class="link_destop" href=""> ПОКАЗАТИ ЩЕ </a>
+      <article class="promo_baner_destop">
+        <div class="promobaner_box_destop">
+          <img width="100px" src="img/quadro_down.svg" alt="" />
+          <img width="100px" src="img/allroad_down.svg" alt="" />
+          <p class="promo_baner_text_destop">
+            Знижки <br />
+            на всі запчастини <br />
+            до 70%
+          </p>
+          <a class="btn_baner_destop" href="">Подивитись всі</a>
+        </div>
+      </article>
+      <article class="popolar_item_sale">
+        <p class="category_name">З цим товаром купують</p>
+        <ul class="popular_list_destop">
+          <li>Запчастини</li>
+          <li>Мотори</li>
+          <li>Шини</li>
+          <li>Електроніка</li>
+          <li>Інструменти</li>
+          <li>Аксесуари</li>
+        </ul>
+      </article>
+
+      <section class="alternative_goods_destop">
+        <div class="alternative_goods_card">
+          <p class="price">$2000</p>
+          <img width="200" height="200" src="img/wear_costume.svg" alt="" />
+          <p class="promo_good_name">
+            Водонепроникний <br />
+            костюм
+          </p>
+          <p class="price_alternative">
+            <span><img src="img/basket_simbol.svg" alt="" /></span>
+          </p>
+        </div>
+        <div class="alternative_goods_card">
+          <p class="price">$2000</p>
+          <img
+            width="200"
+            height="200"
+            src="img/RF_DESS_TM_KAYcharge.svg"
+            alt=""
+          />
+          <p class="promo_good_name">
+            Ключ <br />
+            безпеки
+          </p>
+          <p class="price_alternative">
+            <span><img src="img/basket_simbol.svg" alt="" /></span>
+          </p>
+        </div>
+        <div class="alternative_goods_card">
+          <p class="price">$2000</p>
+          <img width="200" height="200" src="img/sea_scooker.svg" alt="" />
+          <p class="promo_good_name">
+            Водяний <br />
+            скутер
+          </p>
+          <p class="price_alternative">
+            <span><img src="img/basket_simbol.svg" alt="" /></span>
+          </p>
+        </div>
+        <div class="alternative_goods_card">
+          <p class="price">$2000</p>
+          <img width="200" height="200" src="img/snow_moto.svg" alt="" />
+          <p class="promo_good_name">
+            Водяний <br />
+            скутер
+          </p>
+          <p class="price_alternative">
+            <span><img src="img/basket_simbol.svg" alt="" /></span>
+          </p>
+        </div>
+      </section>
+
       <!--  -->
       <!--  -->
       <div class="popular_goods_card">
@@ -276,6 +455,5 @@
         </ul>
       </div>
     </footer>
-    <!-- media748px -->
   </body>
 </html>
