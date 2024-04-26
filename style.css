@@ -140,7 +140,6 @@ body {
   width: 80%;
   border: 1px solid silver;
   border-radius: 5px;
-  margin: 0 auto;
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -492,7 +491,7 @@ button {
 /* footer */
 /* media */
 
-@media (max-width: 768px) {
+@media (max-width: 777px) {
   .promo_destop {
     display: none;
   }
@@ -505,8 +504,27 @@ button {
   .baner_left {
     width: 1000vw;
   }
+  .baner_box {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 36vw;
+  }
+  .promotion_box {
+    width: 80%;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
-@media (min-width: 720px) and (max-width: 1000px) {
+@media (min-width: 777px) and (max-width: 1000px) {
   .category_box {
     display: flex;
     flex-wrap: wrap;
@@ -530,12 +548,18 @@ button {
   .promotion {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 5%;
   }
   .alternative_goods {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    margin: 0 auto;
+    justify-content: space-around;
   }
   .alternative_goods_card {
     display: flex;
@@ -577,8 +601,14 @@ button {
   .promotion_box_right {
     display: none;
   }
-  .baner_left {
-    width: 1000vw;
+  .baner_box {
+    margin-bottom: 40px;
+    width: 136%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 36vw;
   }
   .footer {
     display: flex;
@@ -788,6 +818,14 @@ button {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .promo_condition {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--light_gray_text);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 /*  */
