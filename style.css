@@ -17,7 +17,7 @@ body {
 
 :root {
   --main_text: black;
-  --akcent_color: #12378e;
+  --akcent_color: rgba(28, 98, 205, 1);
   --base_color: #f0f0f4;
   --light_gray_text: #e4e4e7;
   --white_color: white;
@@ -86,22 +86,12 @@ body {
   margin-right: 10px;
 }
 
-.baner_box {
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  gap: 5%;
-  height: 36vw;
-}
 .baner_left {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 121%;
+  width: 100%;
   height: 36vw;
   background-image: url(img/background.svg);
   background-repeat: no-repeat;
@@ -180,12 +170,12 @@ body {
   color: var(--akcent_color);
   font-size: 27px;
   font-weight: 700;
-  padding-right: 8px;
+  justify-content: end;
 }
 .price_alternative span {
   padding: 8px 20px;
   background-color: var(--akcent_color);
-  border-radius: 0 10px 0 0;
+  border-radius: 10px 0 0 0;
   color: var(--white_color);
   text-transform: uppercase;
 }
@@ -204,6 +194,14 @@ body {
   color: var(--akcent_color);
   font-size: 22px;
   text-align: right;
+}
+
+.price_goods_card {
+  width: 100%;
+  padding-right: 8px;
+  color: var(--akcent_color);
+  font-size: 22px;
+  text-align: centerx;
 }
 .promo_good_name {
   font-size: 22px;
@@ -488,6 +486,11 @@ button {
 .popolar_item_sale {
   display: none;
 }
+.goods_card_img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 /* footer */
 /* media */
 
@@ -603,12 +606,8 @@ button {
   }
   .baner_box {
     margin-bottom: 40px;
-    width: 136%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    height: 36vw;
+    height: 40vw;
+    width: 100%;
   }
   .footer {
     display: flex;
@@ -720,6 +719,7 @@ button {
     display: flex;
     justify-content: space-around;
     width: 20%;
+    position: relative;
   }
   .category_box {
     width: 90%;
@@ -826,6 +826,26 @@ button {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
+  }
+  .goods_card_img {
+    display: block;
+  }
+  .price_goods_card {
+    text-align: center;
+  }
+  .promo_good_name_destop {
+    text-align: center;
+    font-weight: 600;
+  }
+  .baner_box {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    gap: 5%;
+    height: 36vw;
   }
 }
 /*  */
